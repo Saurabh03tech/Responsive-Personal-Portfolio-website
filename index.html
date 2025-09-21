@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Saurabh Soni</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2195e14f1b.js" crossorigin="anonymous"></script>
+    <style>
+      html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="saur22.png" class="logo" alt="Logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#coursework">Relevant Coursework</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi, I'm <span>Saurabh</span><br> from University of Hyderabad.</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="About-col-1">
+                    <img src="user.jpg" alt="Profile Picture">
+                </div>
+                <div class="About-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>An enthusiastic and detail-oriented MCA student with a strong foundation in computer applications and
+software development. Proficient in programming languages such as C, Java, and python with hands-on
+experience in web development, database management, and software engineering. Seeking a challenging role
+to utilize and further develop my technical skills in a dynamic and innovative environment.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('technical-skills')">Technical Skills</p>
+                        <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="technical-skills">
+                        <ul>
+                            <li><b>Languages:</b> Python, Java, C, HTML/CSS, JavaScript, PHP, SQL</li>
+                            <li><b>Developer Tools:</b> VS Code, Eclipse, MySQL WorkBench, Jupyter Notebook</li>
+                            <li><b>Technologies/Frameworks:</b> Linux, GitHub</li>
+                            <li><b>Softskills:</b> Self-motivation, Quick Learner, Communication</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="achievements">
+                        <ol>
+                            <li>Secured AIR 684 in NIMCET among 40,000 participants (Top 1.7%).</li>
+                            <li>Awarded the prestigious MMVY Scholarship by Government of Madhya Pradesh.</li>
+                        </ol>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><b>University of Hyderabad</b><br>MCA (Sept. 2024 – present) | CGPA: 7.11</li>
+                            <li><b>Awadhesh Pratap Singh University</b><br>B.Sc. (2020 – 2023) | 64.55%</li>
+                            <li><b>Saraswati Hr Sec School</b><br>12th: 85.40% (2020) | 10th: 92% (2018)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Relevant Coursework -->
+    <div id="coursework">
+        <div class="container">
+            <div class="row">
+                <div class="About-col-2 coursework-text">
+                    <h1 class="subtitle">Relevant Coursework</h1>
+                    <ul>
+                        <li>Data Structures</li>
+                        <li>Computer Architecture</li>
+                        <li>Operating Systems</li>
+                        <li>Database Management</li>
+                        <li>OOP Concepts</li>
+                        <li>Web Development</li>
+                        <li>Cloud Computing</li>
+                    </ul>
+                </div>
+                <div class="About-col-1">
+                    <img src="rele.jpeg" alt="Coursework Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i> saurabhsoniphe@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91-7898303747</p>
+                    <div class="social-icons">
+                        <a href="mailto:saurabhsoniphe@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/saurabh-soni-90a718273"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Saurabh03tech"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.hackerrank.com/profile/saurabhsoniphe"><i class="fa-brands fa-hackerrank"></i></a>
+                    </div>
+                    <br>
+                    <a href="Saurabh_s_Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Enter your name..." required>
+                        <input type="email" name="Email" placeholder="Enter email address..." required>
+                        <textarea name="Message" rows="6" placeholder="Enter your message..."></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Saurabh Soni</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(let tablink of tablinks){ tablink.classList.remove("active-link"); }
+            for(let tabcontent of tabcontents){ tabcontent.classList.remove("active-tab"); }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");   
+        }
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){ sidemenu.style.right = "0"; }
+        function closemenu(){ sidemenu.style.right = "-200px"; }
+    </script>
+</body>
+</html>
